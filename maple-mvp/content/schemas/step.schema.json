@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://maple.dev/schemas/step.schema.json",
+  "type": "object",
+  "required": ["id", "goal", "title", "links"],
+  "properties": {
+    "id": { "type": "string" },
+    "goal": { "type": "string", "enum": ["healthcare","ids","banking","housing","driving","taxes","phone"] },
+    "title": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["en","fr"],
+          "properties": {
+            "en": { "type": "string" },
+            "fr": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["en","fr"],
+          "properties": {
+            "en": { "type": "string" },
+            "fr": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "province": { "type": "array", "items": { "type": "string" } },
+    "statuses": { "type": "array", "items": { "type": "string" } },
+    "links": {
+      "type": "object",
+      "required": ["official"],
+      "properties": {
+        "official": { "type": "string", "format": "uri" },
+        "guide": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "dependencies": { "type": "array", "items": { "type": "string" } },
+    "estTime": { "type": "string" },
+    "docsNeeded": { "type": "array", "items": { "type": "string" } },
+    "required": { "type": "boolean" },
+    "optional": { "type": "boolean" },
+    "override": { "type": "boolean" }
+  },
+  "additionalProperties": false
+}

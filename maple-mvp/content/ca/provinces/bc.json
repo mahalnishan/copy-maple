@@ -1,0 +1,34 @@
+[
+  {
+    "id": "msp",
+    "goal": "healthcare",
+    "title": {"en": "Enroll in MSP (BC health coverage)", "fr": "S’inscrire au MSP (assurance-santé de la C.-B.)"},
+    "province": ["bc"],
+    "links": {"official": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/msp/bc-residents/eligibility-and-enrolment/how-to-enrol"},
+    "required": true
+  },
+  {
+    "id": "icbc-exchange",
+    "goal": "driving",
+    "title": {"en": "Exchange your driver’s licence (ICBC)", "fr": "Échanger votre permis de conduire (ICBC)"},
+    "province": ["bc"],
+    "links": {"official": "https://www.icbc.com/driver-licensing/moving-bc/Pages/moving-from-another-country.aspx"},
+    "required": false
+  },
+  {
+    "id": "bcid",
+    "goal": "ids",
+    "title": {"en": "Get a BC Services Card / BCID", "fr": "Obtenir une carte BC Services / BCID"},
+    "province": ["bc"],
+    "links": {"official": "https://www2.gov.bc.ca/gov/content/governments/government-id/bcid"},
+    "required": false
+  },
+  {
+    "id": "bc-tenant-rights",
+    "goal": "housing",
+    "title": {"en": "Know your tenant rights (BC)", "fr": "Connaître vos droits de locataire (C.-B.)"},
+    "province": ["bc"],
+    "links": {"official": "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies"},
+    "required": false
+  }
+]

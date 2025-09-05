@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ramq",
+    "goal": "healthcare",
+    "title": {"en": "Register for RAMQ (Quebec health insurance)", "fr": "S’inscrire à la RAMQ (assurance maladie du Québec)"},
+    "province": ["qc"],
+    "links": {"official": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/registration"},
+    "required": true
+  },
+  {
+    "id": "saaq-exchange",
+    "goal": "driving",
+    "title": {"en": "Exchange your driver’s licence (SAAQ)", "fr": "Échanger votre permis de conduire (SAAQ)"},
+    "province": ["qc"],
+    "links": {"official": "https://saaq.gouv.qc.ca/en/driver-licence/exchange-your-licence"},
+    "required": false
+  },
+  {
+    "id": "qc-photo-id",
+    "goal": "ids",
+    "title": {"en": "Get a Québec photo ID card (SAAQ)", "fr": "Obtenir une carte d’identité avec photo du Québec (SAAQ)"},
+    "province": ["qc"],
+    "links": {"official": "https://saaq.gouv.qc.ca/en/identity-documents/photo-identity-card"},
+    "required": false
+  },
+  {
+    "id": "qc-tenant-rights",
+    "goal": "housing",
+    "title": {"en": "Know your tenant rights (Quebec)", "fr": "Connaître vos droits de locataire (Québec)"},
+    "province": ["qc"],
+    "links": {"official": "https://www.tal.gouv.qc.ca/en"},
+    "required": false
+  }
+]

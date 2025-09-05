@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ohip",
+    "goal": "healthcare",
+    "title": {"en": "Apply for OHIP (Ontario health card)", "fr": "Demander la carte Santé de l’Ontario (OHIP)"},
+    "description": {"en": "Apply for Ontario Health Insurance Plan.", "fr": "Demandez le régime d’assurance-santé de l’Ontario."},
+    "province": ["on"],
+    "links": {"official": "https://www.ontario.ca/page/apply-ohip"},
+    "docsNeeded": ["Identity documents","Proof of residency"],
+    "required": true
+  },
+  {
+    "id": "on-driver-exchange",
+    "goal": "driving",
+    "title": {"en": "Exchange your out-of-country driver’s licence", "fr": "Échanger votre permis de conduire étranger"},
+    "province": ["on"],
+    "links": {"official": "https://www.ontario.ca/page/exchange-out-province-drivers-licence"},
+    "required": false
+  },
+  {
+    "id": "ontario-photo-card",
+    "goal": "ids",
+    "title": {"en": "Get an Ontario Photo Card (if you don’t drive)", "fr": "Obtenir la carte-photo de l’Ontario (si vous ne conduisez pas)"},
+    "province": ["on"],
+    "links": {"official": "https://www.ontario.ca/page/ontario-photo-card"},
+    "required": false
+  },
+  {
+    "id": "on-tenant-rights",
+    "goal": "housing",
+    "title": {"en": "Know your tenant rights (Ontario)", "fr": "Connaître vos droits de locataire (Ontario)"},
+    "province": ["on"],
+    "links": {"official": "https://tribunalsontario.ca/ltb/renters/"},
+    "required": false
+  }
+]
