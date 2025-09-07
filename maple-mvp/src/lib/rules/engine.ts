@@ -2,12 +2,19 @@ import national from "../../../content/ca/national.json" assert { type: "json" }
 import on from "../../../content/ca/provinces/on.json" assert { type: "json" };
 import bc from "../../../content/ca/provinces/bc.json" assert { type: "json" };
 import qc from "../../../content/ca/provinces/qc.json" assert { type: "json" };
+import resident from "../../../content/ca/resident.json" assert { type: "json" };
 import { Goal, Profile, Step } from "@/lib/types";
 
 type Localized = string | { en: string; fr: string };
 
 export function getCatalog(): Step[] {
-  return [...(national as Step[]), ...(on as Step[]), ...(bc as Step[]), ...(qc as Step[])];
+  return [
+    ...(national as Step[]),
+    ...(on as Step[]),
+    ...(bc as Step[]),
+    ...(qc as Step[]),
+    ...(resident as Step[]),
+  ];
 }
 
 export function localizeText(v: Localized, lang: string) {
@@ -36,7 +43,8 @@ export function generateChecklist(profile: Profile, lang: string) {
 
   const eligible = merged.filter((s) => {
     if (s.province && !s.province.includes(profile.province)) return false;
-    if (s.statuses && !s.statuses.includes(profile.status)) return false;
+    if (s.statuses && profile.status && !s.statuses.includes(profile.status)) return false;
+    if (s.audiences && !s.audiences.includes(profile.audience)) return false;
     if (!profile.goals.includes(s.goal)) return false;
     return true;
   });

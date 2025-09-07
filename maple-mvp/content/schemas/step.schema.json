@@ -5,7 +5,7 @@
   "required": ["id", "goal", "title", "links"],
   "properties": {
     "id": { "type": "string" },
-    "goal": { "type": "string", "enum": ["healthcare","ids","banking","housing","driving","taxes","phone"] },
+    "goal": { "type": "string", "enum": ["healthcare","ids","banking","housing","driving","taxes","phone","address"] },
     "title": {
       "oneOf": [
         { "type": "string" },
@@ -36,6 +36,7 @@
     },
     "province": { "type": "array", "items": { "type": "string" } },
     "statuses": { "type": "array", "items": { "type": "string" } },
+    "audiences": { "type": "array", "items": { "type": "string", "enum": ["newcomer","resident"] } },
     "links": {
       "type": "object",
       "required": ["official"],

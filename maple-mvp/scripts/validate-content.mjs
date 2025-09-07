@@ -18,6 +18,7 @@ const files = [
   path.join(process.cwd(), "content/ca/provinces/on.json"),
   path.join(process.cwd(), "content/ca/provinces/bc.json"),
   path.join(process.cwd(), "content/ca/provinces/qc.json"),
+  path.join(process.cwd(), "content/ca/resident.json"),
 ];
 
 let ok = true;

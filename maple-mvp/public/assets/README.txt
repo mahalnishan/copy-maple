@@ -1,0 +1,1 @@
+Assets placeholder: add logo.svg, marker icons as needed. Current MVP uses default Leaflet markers.

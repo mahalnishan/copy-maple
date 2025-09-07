@@ -2,6 +2,7 @@
   {
     "id": "ramq",
     "goal": "healthcare",
+    "audiences": ["newcomer"],
     "title": {"en": "Register for RAMQ (Quebec health insurance)", "fr": "S’inscrire à la RAMQ (assurance maladie du Québec)"},
     "province": ["qc"],
     "links": {"official": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/registration"},
@@ -10,6 +11,7 @@
   {
     "id": "saaq-exchange",
     "goal": "driving",
+    "audiences": ["newcomer"],
     "title": {"en": "Exchange your driver’s licence (SAAQ)", "fr": "Échanger votre permis de conduire (SAAQ)"},
     "province": ["qc"],
     "links": {"official": "https://saaq.gouv.qc.ca/en/driver-licence/exchange-your-licence"},
@@ -18,6 +20,7 @@
   {
     "id": "qc-photo-id",
     "goal": "ids",
+    "audiences": ["newcomer"],
     "title": {"en": "Get a Québec photo ID card (SAAQ)", "fr": "Obtenir une carte d’identité avec photo du Québec (SAAQ)"},
     "province": ["qc"],
     "links": {"official": "https://saaq.gouv.qc.ca/en/identity-documents/photo-identity-card"},
@@ -26,9 +29,28 @@
   {
     "id": "qc-tenant-rights",
     "goal": "housing",
+    "audiences": ["newcomer"],
     "title": {"en": "Know your tenant rights (Quebec)", "fr": "Connaître vos droits de locataire (Québec)"},
     "province": ["qc"],
     "links": {"official": "https://www.tal.gouv.qc.ca/en"},
     "required": false
+  },
+  {
+    "id": "qc-address-health",
+    "goal": "address",
+    "audiences": ["resident"],
+    "title": {"en": "Update address with RAMQ", "fr": "Mettre à jour l’adresse auprès de la RAMQ"},
+    "province": ["qc"],
+    "links": {"official": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/change-information/you-move"},
+    "required": true
+  },
+  {
+    "id": "qc-address-driver",
+    "goal": "address",
+    "audiences": ["resident"],
+    "title": {"en": "Update address on driver’s licence (SAAQ)", "fr": "Mettre à jour l’adresse sur le permis (SAAQ)"},
+    "province": ["qc"],
+    "links": {"official": "https://saaq.gouv.qc.ca/en/online-services/change-address"},
+    "required": true
   }
 ]

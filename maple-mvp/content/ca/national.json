@@ -2,6 +2,7 @@
   {
     "id": "sin",
     "goal": "ids",
+    "audiences": ["newcomer"],
     "title": {"en": "Get your Social Insurance Number (SIN)", "fr": "Obtenez votre numéro d’assurance sociale (NAS)"},
     "description": {"en": "Apply for your SIN to work and access government programs.", "fr": "Demandez votre NAS pour travailler et accéder aux programmes gouvernementaux."},
     "links": {"official": "https://www.canada.ca/en/employment-social-development/services/sin/apply.html"},
@@ -12,6 +13,7 @@
   {
     "id": "bank-account",
     "goal": "banking",
+    "audiences": ["newcomer"],
     "title": {"en": "Open a Canadian bank account", "fr": "Ouvrez un compte bancaire canadien"},
     "description": {"en": "Know your rights and required documents when opening an account.", "fr": "Connaissez vos droits et les documents requis pour ouvrir un compte."},
     "links": {"official": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html"},
@@ -21,6 +23,7 @@
   {
     "id": "cra-my-account",
     "goal": "taxes",
+    "audiences": ["newcomer"],
     "title": {"en": "Create CRA My Account", "fr": "Créez Mon dossier de l’ARC"},
     "description": {"en": "Set up your online account with the Canada Revenue Agency.", "fr": "Créez votre compte en ligne auprès de l’Agence du revenu du Canada."},
     "links": {"official": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html"},
@@ -29,6 +32,7 @@
   {
     "id": "taxes-intro",
     "goal": "taxes",
+    "audiences": ["newcomer"],
     "title": {"en": "Understand taxes in Canada", "fr": "Comprendre l’impôt au Canada"},
     "description": {"en": "Learn when and how to file your taxes as a newcomer.", "fr": "Apprenez quand et comment produire votre déclaration d’impôt en tant que nouvel arrivant."},
     "links": {"official": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/international-tax-non-residents/information-newcomers-canada.html"},
@@ -37,6 +41,7 @@
   {
     "id": "mobile-plan",
     "goal": "phone",
+    "audiences": ["newcomer"],
     "title": {"en": "Choose a mobile phone plan", "fr": "Choisir un forfait mobile"},
     "description": {"en": "Compare plans and understand your rights under the Wireless Code.", "fr": "Comparez les forfaits et comprenez vos droits selon le Code sur les services sans fil."},
     "links": {"official": "https://crtc.gc.ca/eng/phone/mobile.htm", "guide": "https://crtc.gc.ca/eng/phone/mobile/codesimpl.htm"},
@@ -45,6 +50,7 @@
   {
     "id": "housing-basics",
     "goal": "housing",
+    "audiences": ["newcomer"],
     "title": {"en": "Housing basics and finding rentals", "fr": "Notions de base sur le logement et recherche de location"},
     "description": {"en": "Learn how renting works and how to avoid scams.", "fr": "Découvrez le fonctionnement de la location et comment éviter les arnaques."},
     "links": {"official": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/renting-home.html"},
@@ -53,6 +59,7 @@
   {
     "id": "scam-awareness",
     "goal": "ids",
+    "audiences": ["newcomer"],
     "title": {"en": "Protect yourself from scams", "fr": "Protégez-vous contre la fraude"},
     "description": {"en": "Know common newcomer scams and where to report.", "fr": "Connaître les arnaques courantes visant les nouveaux arrivants et où les signaler."},
     "links": {"official": "https://www.antifraudcentre-centreantifraude.ca/"},

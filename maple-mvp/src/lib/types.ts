@@ -15,6 +15,8 @@ export type Province =
 
 export type Status = "pr" | "work" | "study" | "refugee" | "other";
 
+export type Audience = "newcomer" | "resident";
+
 export type Goal =
   | "healthcare"
   | "ids"
@@ -22,7 +24,8 @@ export type Goal =
   | "housing"
   | "driving"
   | "taxes"
-  | "phone";
+  | "phone"
+  | "address";
 
 export type Link = {
   official: string;
@@ -36,6 +39,7 @@ export type Step = {
   description?: string | { en: string; fr: string };
   province?: Province[]; // empty/undefined means national
   statuses?: Status[]; // eligible statuses; undefined => all
+  audiences?: Audience[]; // eligible audiences; undefined => all
   links: Link;
   dependencies?: string[];
   estTime?: string;
@@ -46,8 +50,9 @@ export type Step = {
 };
 
 export type Profile = {
+  audience: Audience;
   province: Province;
-  status: Status;
+  status?: Status;
   goals: Goal[];
 };
 
@@ -55,4 +60,7 @@ export type AppState = {
   version: number;
   profile?: Profile;
   progress: Record<string, boolean>; // stepId -> done
+  notes?: Record<string, string>;
+  pinned?: Record<string, boolean>;
+  due?: Record<string, string>; // ISO date
 };

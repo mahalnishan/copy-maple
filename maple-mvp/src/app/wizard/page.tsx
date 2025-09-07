@@ -3,8 +3,9 @@
 import ProvinceSelector from "@/components/ProvinceSelector";
 import StatusSelector from "@/components/StatusSelector";
 import GoalsSelector from "@/components/GoalsSelector";
+import AudienceSelector from "@/components/AudienceSelector";
 import { useState } from "react";
-import { Goal, Profile, Province, Status } from "@/lib/types";
+import { Audience, Goal, Profile, Province, Status } from "@/lib/types";
 import { setProfile } from "@/lib/storage/local";
 import { useRouter, useSearchParams } from "next/navigation";
 import { initI18n } from "@/i18n/config";
@@ -14,19 +15,21 @@ import { plausibleTrack } from "@/lib/analytics";
 export default function WizardPage() {
   initI18n();
   const { t } = useTranslation();
+  const [audience, setAudience] = useState<Audience>("newcomer");
   const [province, setProvince] = useState<Province | undefined>();
   const [status, setStatus] = useState<Status | undefined>();
   const [goals, setGoals] = useState<Goal[]>(["healthcare", "ids", "banking"]);
   const router = useRouter();
   const search = useSearchParams();
 
-  const canContinue = !!province && !!status && goals.length > 0;
+  const needsStatus = audience === "newcomer";
+  const canContinue = !!province && (!needsStatus || !!status) && goals.length > 0;
 
   const onFinish = () => {
     if (!canContinue) return;
-    const profile: Profile = { province: province!, status: status!, goals };
+    const profile: Profile = { audience, province: province!, status, goals };
     setProfile(profile);
-    plausibleTrack("wizard_completed", { province: profile.province, status: profile.status });
+    plausibleTrack("wizard_completed", { province: profile.province, audience: profile.audience });
     const qp = search.toString();
     router.push(`/checklist${qp ? `?${qp}` : ""}`);
   };
@@ -35,8 +38,9 @@ export default function WizardPage() {
     <section className="max-w-5xl mx-auto px-4 py-10 space-y-6">
       <h1 className="text-3xl font-bold mb-4">{t("wizard.title")}</h1>
       <div className="space-y-6">
+        <AudienceSelector value={audience} onChange={setAudience} />
         <ProvinceSelector value={province} onChange={setProvince} />
-        <StatusSelector value={status} onChange={setStatus} />
+        {needsStatus && <StatusSelector value={status} onChange={setStatus} />}
         <GoalsSelector values={goals} onChange={setGoals} />
       </div>
       <div className="pt-4">

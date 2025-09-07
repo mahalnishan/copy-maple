@@ -2,6 +2,7 @@
   {
     "id": "ohip",
     "goal": "healthcare",
+    "audiences": ["newcomer"],
     "title": {"en": "Apply for OHIP (Ontario health card)", "fr": "Demander la carte Santé de l’Ontario (OHIP)"},
     "description": {"en": "Apply for Ontario Health Insurance Plan.", "fr": "Demandez le régime d’assurance-santé de l’Ontario."},
     "province": ["on"],
@@ -12,6 +13,7 @@
   {
     "id": "on-driver-exchange",
     "goal": "driving",
+    "audiences": ["newcomer"],
     "title": {"en": "Exchange your out-of-country driver’s licence", "fr": "Échanger votre permis de conduire étranger"},
     "province": ["on"],
     "links": {"official": "https://www.ontario.ca/page/exchange-out-province-drivers-licence"},
@@ -20,6 +22,7 @@
   {
     "id": "ontario-photo-card",
     "goal": "ids",
+    "audiences": ["newcomer"],
     "title": {"en": "Get an Ontario Photo Card (if you don’t drive)", "fr": "Obtenir la carte-photo de l’Ontario (si vous ne conduisez pas)"},
     "province": ["on"],
     "links": {"official": "https://www.ontario.ca/page/ontario-photo-card"},
@@ -28,9 +31,28 @@
   {
     "id": "on-tenant-rights",
     "goal": "housing",
+    "audiences": ["newcomer"],
     "title": {"en": "Know your tenant rights (Ontario)", "fr": "Connaître vos droits de locataire (Ontario)"},
     "province": ["on"],
     "links": {"official": "https://tribunalsontario.ca/ltb/renters/"},
     "required": false
+  },
+  {
+    "id": "on-address-health",
+    "goal": "address",
+    "audiences": ["resident"],
+    "title": {"en": "Update address for OHIP", "fr": "Mettre à jour l’adresse pour la carte Santé"},
+    "province": ["on"],
+    "links": {"official": "https://www.ontario.ca/page/update-your-health-card"},
+    "required": true
+  },
+  {
+    "id": "on-address-driver",
+    "goal": "address",
+    "audiences": ["resident"],
+    "title": {"en": "Update address on driver’s licence", "fr": "Mettre à jour l’adresse sur le permis de conduire"},
+    "province": ["on"],
+    "links": {"official": "https://www.ontario.ca/page/change-your-address-drivers-licence"},
+    "required": true
   }
 ]

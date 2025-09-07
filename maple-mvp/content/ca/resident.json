@@ -1,0 +1,11 @@
+[
+  {
+    "id": "cra-address-change",
+    "goal": "address",
+    "audiences": ["resident"],
+    "title": {"en": "Update your address with CRA", "fr": "Mettre à jour votre adresse auprès de l’ARC"},
+    "description": {"en": "Change your mailing address in CRA My Account.", "fr": "Modifiez votre adresse postale dans Mon dossier de l’ARC."},
+    "links": {"official": "https://www.canada.ca/en/revenue-agency/services/e-services/account-individuals/change-address.html"},
+    "required": true
+  }
+]
