@@ -15,9 +15,10 @@ describe("storage", () => {
   });
 
   it("persists profile", () => {
-    setProfile({ province: "on", status: "pr", goals: ["ids"] });
+    setProfile({ audience: "newcomer", province: "on", status: "pr", goals: ["ids"] });
     const p = getProfile();
     expect(p?.province).toBe("on");
+    expect(p?.audience).toBe("newcomer");
   });
 
   it("toggles step completion", () => {

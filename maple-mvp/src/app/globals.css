@@ -2,7 +2,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111827; /* gray-900 */
+  --foreground: #0f172a; /* slate-900 */
+}
+
+html[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #e5e7eb; /* gray-200 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #e5e7eb;
+  }
+  html[data-theme="light"] {
+    --background: #ffffff;
+    --foreground: #0f172a;
+  }
 }
 
 @theme inline {
@@ -12,39 +28,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #e5e7eb; /* gray-200 */
-  }
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-* {
-  outline-offset: 2px;
-}
-
-:focus-visible {
-  outline: 2px solid #6b7280; /* gray-500 */
-}
+html:focus-within { scroll-behavior: smooth; }
+* { outline-offset: 2px; }
+:focus-visible { outline: 2px solid #6b7280; }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
-@media print {
-  header, nav, footer, .no-print { display: none !important; }
-  main { padding: 0 !important; }
-}
+@media print { header, nav, footer, .no-print { display: none !important; } main { padding: 0 !important; } }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-}
+body { background: var(--background); color: var(--foreground); }

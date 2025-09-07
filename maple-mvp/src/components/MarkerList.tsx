@@ -2,9 +2,15 @@
 
 import { markers as allMarkers } from "@/lib/services/data";
 import { Province } from "@/lib/types";
+import { ServiceFiltersState } from "@/components/ServiceFilters";
 
-export default function MarkerList({ province }: { province?: Province }) {
-  const markers = (province ? allMarkers.filter((m) => m.province === province) : allMarkers).slice(0, 50);
+export default function MarkerList({ province, filters }: { province?: Province; filters: ServiceFiltersState }) {
+  let markers = (province ? allMarkers.filter((m) => m.province === province) : allMarkers).slice(0, 200);
+  if (filters.type !== "all") markers = markers.filter((m) => m.type === filters.type);
+  if (filters.q.trim()) {
+    const q = filters.q.toLowerCase();
+    markers = markers.filter((m) => m.name.toLowerCase().includes(q));
+  }
   return (
     <ul className="space-y-2">
       {markers.map((m) => (
@@ -15,6 +21,7 @@ export default function MarkerList({ province }: { province?: Province }) {
           </a>
         </li>
       ))}
+      {markers.length === 0 && <li className="text-sm text-gray-600">No results</li>}
     </ul>
   );
 }
